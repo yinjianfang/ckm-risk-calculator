@@ -860,46 +860,30 @@ with right:
 
         st.markdown("---")
 
-
         st.markdown(
             "### Individual Risk Explanation"
         )
 
-
         try:
 
-
             shap_fig = generate_shap_plot(
-
                 explainer,
-
                 X
-
             )
-
 
             st.pyplot(
-
                 shap_fig,
-
                 use_container_width=True
-
             )
 
-
-                 st.caption(
-
-    "The SHAP waterfall plot illustrates how each feature contributes to this individual's predicted probability of advanced CKM risk."
-
-        )
+            st.caption(
+                "The SHAP waterfall plot illustrates how each feature contributes to this individual's predicted probability of advanced CKM risk."
+            )
 
         except Exception as e:
 
-
             st.warning(
-
                 f"SHAP explanation unavailable: {e}"
-
             )
 
 
