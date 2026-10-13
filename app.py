@@ -132,8 +132,11 @@ try:
 
     model = load_model()
 
-    # SHAP explainer for individual interpretation
-    explainer = shap.TreeExplainer(model)
+    # SHAP explainer for probability-based individual interpretation
+    explainer = shap.TreeExplainer(
+        model,
+        model_output="probability"
+    )
 
 
 except Exception as e:
@@ -884,11 +887,9 @@ with right:
             )
 
 
-            st.caption(
-
-                "The SHAP waterfall plot illustrates how each feature contributes to this individual's predicted advanced CKM risk."
-
-            )
+           st.caption(
+    "The SHAP waterfall plot illustrates how each feature contributes to this individual's predicted probability of advanced CKM risk."
+)
 
 
         except Exception as e:
