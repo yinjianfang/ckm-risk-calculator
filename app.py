@@ -132,12 +132,12 @@ try:
 
     model = load_model()
 
-    # SHAP explainer for probability-based individual interpretation
-   explainer = shap.TreeExplainer(
-    model,
-    feature_perturbation="interventional",
-    model_output="probability"
-)
+    explainer = shap.TreeExplainer(
+        model,
+        feature_perturbation="interventional",
+        model_output="probability"
+    )
+
 
 except Exception as e:
 
