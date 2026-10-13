@@ -887,10 +887,11 @@ with right:
             )
 
 
-           st.caption(
-    "The SHAP waterfall plot illustrates how each feature contributes to this individual's predicted probability of advanced CKM risk."
-)
+                 st.caption(
 
+    "The SHAP waterfall plot illustrates how each feature contributes to this individual's predicted probability of advanced CKM risk."
+
+        )
 
         except Exception as e:
 
